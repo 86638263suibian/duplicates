@@ -2,6 +2,10 @@
 
 `cd ./src && make && cd ..`
 
+# Test
+
+`ruby test.rb`
+
 # Usage
 
 ```
