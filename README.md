@@ -1,13 +1,13 @@
 # Build
 
 ```
-mkdir bin obj
-cd ./src && make && cd ..
+$ mkdir bin obj
+$ cd ./src && make && cd ..
 ```
 
 # Test
 
-`ruby test.rb`
+`$ ruby test.rb`
 
 # Usage
 
