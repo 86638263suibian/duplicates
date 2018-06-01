@@ -1,6 +1,9 @@
 # Build
 
-`cd ./src && make && cd ..`
+```
+mkdir bin obj
+cd ./src && make && cd ..
+```
 
 # Test
 
