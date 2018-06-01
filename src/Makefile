@@ -1,8 +1,8 @@
 .POSIX:
 .SUFFIXES:
 CC	= gcc
-CFLAGS	= -Wall -Wextra -std=c89 -pedantic -O2
-LDFLAGS	= -lm
+CFLAGS	= -O2 -fno-common -fno-omit-frame-pointer -fPIE -fstack-check -fstack-protector-strong -funsigned-char -mfunction-return=thunk -mindirect-branch=thunk -Wall -Wbad-function-cast -Wcast-align -Wcast-qual -Wconversion -Wextra -Wformat=2 -Wformat-nonliteral -Wformat-security -Winline -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wpedantic -Wpointer-arith -Wsign-conversion -Wstrict-overflow -Wstrict-prototypes -Wtrampolines -Wwrite-strings 
+LDFLAGS	= -lm -Wl,-z,nodlopen -Wl,-z,nodump -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now
 
 all: ../bin/duplicates
 ../bin/duplicates: ../obj/compare.o ../obj/duplicates.o ../obj/error.o ../obj/input.o ../obj/main.o ../obj/memory.o ../obj/sort.o
